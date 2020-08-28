@@ -1,0 +1,70 @@
+---- pvPortMalloc Matches (74 in 28 files) ----
+xCoRoutineCreate in croutine.c (FreeRTOS) : 	pxCoRoutine = ( CRCB_t * ) pvPortMalloc( sizeof( CRCB_t ) );
+analyzeProprttyChanged in dataAnalyze.c (MIIO) : 			char *str = pvPortMalloc(MIIO_PSEC_VALUE_MAX_LEN);
+analyzeResult2Psec in dataAnalyze.c (MIIO) : 			char *str = pvPortMalloc(MIIO_PSEC_VALUE_MAX_LEN);
+xEventGroupCreate in event_groups.c (FreeRTOS) : 		follows:  pvPortMalloc() always ensures returned memory blocks are
+xEventGroupCreate in event_groups.c (FreeRTOS) : 		pvPortMalloc() must return a pointer that is guaranteed to meet the
+xEventGroupCreate in event_groups.c (FreeRTOS) : 		pxEventBits = ( EventGroup_t * ) pvPortMalloc( sizeof( EventGroup_t ) ); /*lint !e9087 !e9079 see comment above. */
+HalFlashWrite in hal_flash.c (HAL) : 		FlashPageTmpData = pvPortMalloc(FLASH_PAGE_SIZE);
+MyPrintf in hal_usart.c (HAL) : 	char *string = pvPortMalloc(1024);
+PrintfString in hal_usart.c (HAL) : 	char *string = pvPortMalloc(512); 
+heap_1.c (FreeRTOS\portable\MemMang) line 30 :  * The simplest possible implementation of pvPortMalloc().  Note that this
+heap_1.c (FreeRTOS\portable\MemMang) line 69 : void *pvPortMalloc( size_t xWantedSize )
+heap_2.c (FreeRTOS\portable\MemMang) line 29 :  * A sample implementation of pvPortMalloc() and vPortFree() that permits
+heap_2.c (FreeRTOS\portable\MemMang) line 118 : void *pvPortMalloc( size_t xWantedSize )
+heap_3.c (FreeRTOS\portable\MemMang) line 30 :  * Implementation of pvPortMalloc() and vPortFree() that relies on the
+heap_3.c (FreeRTOS\portable\MemMang) line 58 : void *pvPortMalloc( size_t xWantedSize )
+heap_4.c (FreeRTOS\portable\MemMang) line 29 :  * A sample implementation of pvPortMalloc() and vPortFree() that combines
+heap_4.c (FreeRTOS\portable\MemMang) line 87 :  * pvPortMalloc() is called.
+heap_4.c (FreeRTOS\portable\MemMang) line 113 : void *pvPortMalloc( size_t xWantedSize )
+heap_5.c (FreeRTOS\portable\MemMang) line 29 :  * A sample implementation of pvPortMalloc() that allows the heap to be defined
+heap_5.c (FreeRTOS\portable\MemMang) line 39 :  * vPortDefineHeapRegions() ***must*** be called before pvPortMalloc().
+heap_5.c (FreeRTOS\portable\MemMang) line 40 :  * pvPortMalloc() will be called if any task objects (tasks, queues, event
+heap_5.c (FreeRTOS\portable\MemMang) line 132 : void *pvPortMalloc( size_t xWantedSize )
+interfaceDataHanle in interface.c (MIIO) : 	miio_data_t *report = pvPortMalloc(sizeof(miio_data_t));
+lcd_printf_init in lcd_tft.c (DRIVE\lcd) : 	lp_char = pvPortMalloc(((40+1)*(15+1)));//每行显示30个字符 可以显示20行
+lcd_log in lcd_tft.c (DRIVE\lcd) : 	string = pvPortMalloc(512);
+lcd_printf in lcd_tft.c (DRIVE\lcd) : 	string = pvPortMalloc(512);
+miioTask in miio.c (MIIO) : 		miio_data_t *cloudData = pvPortMalloc(sizeof(miio_data_t));
+miioRecvHandle in miio.c (MIIO) : 	miio_data_t *analyzeData =  = pvPortMalloc(sizeof(miio_data_t));//解析后的数据
+miioSetModelName in miio.c (MIIO) : 	miio_data_t *md = pvPortMalloc(sizeof(miio_data_t));
+miioUpMCUVersion in miio.c (MIIO) : 	miio_data_t *md = pvPortMalloc(sizeof(miio_data_t));
+miioModelFactory in miio.c (MIIO) : 	model_data = pvPortMalloc(sizeof(miio_data_t));
+miioModelRestore in miio.c (MIIO) : 	model_data = pvPortMalloc(sizeof(miio_data_t));
+miioModelReboot in miio.c (MIIO) : 	model_data = pvPortMalloc(sizeof(miio_data_t));
+miioGetVersion in miio.c (MIIO) : 			mi.version = pvPortMalloc(strlen(sh_buf_get(index))+1);//分配内存
+miioSendWait in miio.c (MIIO) : 	char *psec = pvPortMalloc(MIIO_PSEC_MALLOC_SIZE);
+miioSend in miio.c (MIIO) : 	char *psec = pvPortMalloc(MIIO_PSEC_MALLOC_SIZE);
+mpu_wrappers.c (FreeRTOS\portable\Common) line 826 : 	void *MPU_pvPortMalloc( size_t xSize )
+MPU_pvPortMalloc in mpu_wrappers.c (FreeRTOS\portable\Common) : 		pvReturn = pvPortMalloc( xSize );
+port.c (FreeRTOS\portable\GCC\AVR32_UC3) line 141 :  * pvPortMalloc, pvPortRealloc and vPortFree.
+vPortTaskUsesFPU in port.c (FreeRTOS\portable\GCC\IA32_flat) : 		pucPortTaskFPUContextBuffer = ( uint8_t * ) pvPortMalloc( portFPU_CONTEXT_SIZE_BYTES );
+xPortStartScheduler in port.c (FreeRTOS\portable\GCC\MicroBlaze) : 	pulISRStack = ( uint32_t * ) pvPortMalloc( configMINIMAL_STACK_SIZE * sizeof( StackType_t ) );
+xPortUsesFloatingPoint in port.c (FreeRTOS\portable\Renesas\SH2A_FPU) : 	pulFlopBuffer = ( uint32_t * ) pvPortMalloc( portFLOP_STORAGE_SIZE );
+port.c (FreeRTOS\portable\WizC\PIC18) line 286 : 	void *pvPortMalloc( uint16_t usWantedSize )
+portable.h (FreeRTOS\include) line 114 :  * must be called before any calls to pvPortMalloc() - not creating a task,
+portable.h (FreeRTOS\include) line 116 :  * pvPortMalloc being called.
+portable.h (FreeRTOS\include) line 129 : void *pvPortMalloc( size_t xSize ) PRIVILEGED_FUNCTION;
+portcomn.c (FreeRTOS\portable\oWatcom\16BitDOS\common) line 37 : 	+ pvPortMalloc and vPortFree have been removed.  The projects now use
+xQueueGenericCreate in queue.c (FreeRTOS) : 		deviation as follows:  pvPortMalloc() always ensures returned memory
+xQueueGenericCreate in queue.c (FreeRTOS) : 		pvPortMalloc() must return a pointer that is guaranteed to meet the
+xQueueGenericCreate in queue.c (FreeRTOS) : 		pxNewQueue = ( Queue_t * ) pvPortMalloc( sizeof( Queue_t ) + xQueueSizeInBytes ); /*lint !e9087 !e9079 see comment above. */
+rtosShowStatus in rtosEx.c (APP) : 	char *string = pvPortMalloc(1024);
+rtosShowStatus in rtosEx.c (APP) : 	TaskStatus_t *taskStatus = pvPortMalloc(sizeof(TaskStatus_t) * RTOSEX_MAX_TASK_LIST_NUM);
+prvReadMessageFromBuffer in stream_buffer.c (FreeRTOS) : 		Both are allocated in a single call to pvPortMalloc().  The
+prvReadMessageFromBuffer in stream_buffer.c (FreeRTOS) : 		pucAllocatedMemory = ( uint8_t * ) pvPortMalloc( xBufferSizeBytes + sizeof( StreamBuffer_t ) ); /*lint !e9079 malloc() only returns void*. */
+vStreamBufferDelete in stream_buffer.c (FreeRTOS) : 			to pvPortMalloc(), hence only one call to vPortFree() is required. */
+vStreamBufferDelete in stream_buffer.c (FreeRTOS) : 			vPortFree( ( void * ) pxStreamBuffer ); /*lint !e9087 Standard free() semantics require void *, plus pxStreamBuffer was allocated by pvPortMalloc(). */
+stringHandle.h (MIIO) line 14 : #define SH_MALLOC												pvPortMalloc	//动态内存分配函数
+task.h (FreeRTOS\include) line 1541 : 		pxTaskStatusArray = pvPortMalloc( uxArraySize * sizeof( TaskStatus_t ) );
+tasks.c (FreeRTOS) line 474 :  * allocated by calls to pvPortMalloc from within the tasks application code).
+xTaskCreateRestricted in tasks.c (FreeRTOS) : 			pxNewTCB = ( TCB_t * ) pvPortMalloc( sizeof( TCB_t ) );
+xTaskCreate in tasks.c (FreeRTOS) : 			pxNewTCB = ( TCB_t * ) pvPortMalloc( sizeof( TCB_t ) );
+xTaskCreate in tasks.c (FreeRTOS) : 				pxNewTCB->pxStack = ( StackType_t * ) pvPortMalloc( ( ( ( size_t ) usStackDepth ) * sizeof( StackType_t ) ) ); /*lint !e961 MISRA exception as the casts are only redundant for some ports. */
+xTaskCreate in tasks.c (FreeRTOS) : 			pxStack = pvPortMalloc( ( ( ( size_t ) usStackDepth ) * sizeof( StackType_t ) ) ); /*lint !e9079 All values returned by pvPortMalloc() have at least the alignment required by the MCU's stack and this allocation is the stack. */
+xTaskCreate in tasks.c (FreeRTOS) : 				pxNewTCB = ( TCB_t * ) pvPortMalloc( sizeof( TCB_t ) ); /*lint !e9087 !e9079 All values returned by pvPortMalloc() have at least the alignment required by the MCU's stack, and the first member of TCB_t is always a pointer to the task's stack. */
+vTaskList in tasks.c (FreeRTOS) : 		configSUPPORT_DYNAMIC_ALLOCATION is set to 0 then pvPortMalloc() will
+vTaskList in tasks.c (FreeRTOS) : 		pxTaskStatusArray = pvPortMalloc( uxCurrentNumberOfTasks * sizeof( TaskStatus_t ) ); /*lint !e9079 All values returned by pvPortMalloc() have at least the alignment required by the MCU's stack and this allocation allocates a struct that has the alignment requirements of a pointer. */
+vTaskGetRunTimeStats in tasks.c (FreeRTOS) : 		configSUPPORT_DYNAMIC_ALLOCATION is set to 0 then pvPortMalloc() will
+vTaskGetRunTimeStats in tasks.c (FreeRTOS) : 		pxTaskStatusArray = pvPortMalloc( uxCurrentNumberOfTasks * sizeof( TaskStatus_t ) ); /*lint !e9079 All values returned by pvPortMalloc() have at least the alignment required by the MCU's stack and this allocation allocates a struct that has the alignment requirements of a pointer. */
+xTimerCreate in timers.c (FreeRTOS) : 		pxNewTimer = ( Timer_t * ) pvPortMalloc( sizeof( Timer_t ) ); /*lint !e9087 !e9079 All values returned by pvPortMalloc() have at least the alignment required by the MCU's stack, and the first member of Timer_t is always a pointer to the timer's mame. */

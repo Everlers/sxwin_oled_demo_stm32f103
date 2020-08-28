@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : E:\Project\DisplayDemo\data\PCB20200729\Demo1.PcbDoc
+Date         : 2020/7/30
+Time         : 11:28:01
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 243
+    Connections routed, 243
+    Connections remaining, 0
+count : 4
